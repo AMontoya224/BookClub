@@ -1,0 +1,218 @@
+@charset "ISO-8859-1";
+
+/* INDEX */
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body{
+	font-family: Roboto;
+	padding: 2vw 10vw;
+}
+
+h1{
+	color: rgb(0, 119, 255);
+}
+
+h4{
+	color: rgb(200, 0, 0);
+}
+
+header{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+main{
+	display: flex;
+	flex-direction: column;
+	margin: 3vw 0;
+	justify-content: space-between;
+}
+
+table{
+	margin: 0 auto;
+}
+
+th, td{
+    padding: 0.4vw;
+    text-align: center;
+    border-bottom: 0.1vw solid rgb(50, 50, 50);
+    transition: 0.5s;
+}
+
+th{
+    color: white;
+    font-size: 1.8vw;
+    background-color: rgb(35, 35, 35);
+}
+
+th:hover{
+    background-color: rgb(15, 15, 15);
+}
+
+td:hover{
+    background-color: rgb(220, 220, 220);
+}
+
+.container{
+	flex: 3;
+	padding: 2vw 2.5vw;
+	border-right: 1px solid rgb(0, 0, 0);
+  	border-left: 1px solid rgb(0, 0, 0);
+}
+
+.container-1{
+	flex: 1;
+}
+
+.container-2{
+	margin: 2vw 0;
+	padding: 2vw 2.5vw;
+	border-top: 1px solid rgb(0, 0, 0);
+  	border-bottom: 1px solid rgb(0, 0, 0);
+}
+
+.container-2 > p{
+	margin: 2vw 0;
+	font-style: italic;
+}
+
+.justify{
+	margin: 2vw 0;
+}
+
+/* input-start */
+.inp{
+  	position: relative;
+	margin: auto;
+  	width: 100%;
+  	border-radius: 3px;
+  	overflow: hidden;
+}
+
+.inp-label{
+    position: absolute;
+    top: 0px;
+    left: 12px;
+    font-size: 18px;
+    color: rgba(0, 0, 0, .5);
+    font-weight: 500;
+    transform-origin: 0 0;
+    transform: translate3d(0, 0, 0);
+    transition: all .2s ease;
+    pointer-events: none;
+}
+
+.inp-label-P{
+	top: 21px;
+}
+
+.inp-focus{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    transform: scaleX(0);
+    transform-origin: left;
+}
+
+.inp-input{
+    appearance: none;
+    width: 94.25%;
+    border: 0;
+    font-family: inherit;
+    padding: 19px 12px 3px 12px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: rgba(0, 0, 0, .01);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .3);
+    color: rgb(0, 0, 0);
+    transition: all .15s ease;
+}
+.inp-input:hover{
+	background-color: rgba(0, 0, 0 , .04);
+    box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .5);
+}
+    
+.inp-input:not(:placeholder-shown) + .inp-label{
+	color: rgba(0, 0, 0, .5);
+    transform: translate3d(0, -17px, 0) scale(.75);
+}
+.inp-input:focus{
+	outline: none;
+	background-color: rgba(0, 0, 0 , .09);
+	box-shadow: inset 0 -2px 0 rgb(0, 119, 255);
+}
+
+.inp-input:focus + .inp-label{
+	color: rgb(0, 119, 255);
+	transform: translate3d(0, -17px, 0) scale(.75);
+}
+
+.inp-input:focus + .inp-label + .inp-focus{
+	transform: scaleX(1);
+    transition: all .1s ease;
+}
+/* input-end */
+
+.error{
+  	display: block;
+  	text-align: right;
+	font-size: 13px;
+	color: rgb(200, 0, 0);
+}
+
+.checkbox{
+	margin-left: 1vw;
+}
+
+.row{
+	display: flex;
+	align-items: center;
+}
+
+.column{
+	display: flex;
+	flex-direction: column;
+}
+
+.submit{
+	color: white;
+	background-color: rgb(35, 35, 35);
+	border: none;
+    padding: 15px 0;
+    width: 100%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.submit:hover{
+	background-color:rgb(15, 15, 15);
+}
+
+.link{
+	color: DodgerBlue;
+	background-color: transparent;
+	border: none;
+    padding: 0 2vw;
+    margin:0;
+    font-size: 16px;
+    text-decoration: underline;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.link:hover{
+	color: RoyalBlue;
+}
+
+/*PC*/
+@media only screen and (min-width:900px) {
+	main{
+		flex-direction: row;
+	}
+}
